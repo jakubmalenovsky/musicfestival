@@ -1,3 +1,6 @@
+import{Link, useParams} from "react-router-dom";
+
+
 export default function DetailPage() {
     const eventdetail = [
         {uid: "1", time: "10:00"},
