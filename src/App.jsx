@@ -1,8 +1,7 @@
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "./Layout";
 import StagePage from "./views/StagePage";
-import PerformanceDetailPage from "./views/PerformanceDetailPage";
-import "./App.css";
+import DetailPage from "./views/DetailPage";
 import HomePage from "./views/HomePage";
 
 const router = createBrowserRouter([
@@ -16,20 +15,16 @@ const router = createBrowserRouter([
       },
       {
         path: "stagepage/:stageId",
-        element: <StagePage />,
+        element: <StagePage/>
       },
       {
-        path: "performancedetailpage/:eventId",
-        element: <PerformanceDetailPage />,
-      },
-    ],
-  },
-]);
+        path: "detailpage/:eventId",
+        element: <DetailPage />
+      }
+    ]
+  }
+])
 
-function App() {
-  return (
-    <RouterProvider router={router} />
-  );
+export default function App() {
+  return <RouterProvider router={router}/>
 }
-
-export default App;
